@@ -1,120 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klinam | Decentralized Waste Utility</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Klinam — Decentralized Waste Utility for Uncharted Terrains</title>
+    <meta name="description" content="Klinam replaces massive compactor trucks with agile micro-logistics and caretaker-driven reporting, integrated with OPay recurrent billing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo-container">
-                <img src="logo.png" alt="Klinam Logo" class="nav-logo">
-                <span class="logo-text">Klinam</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#story-1">The Problem</a>
-                <a href="#story-2">The Impact</a>
-                <a href="#story-3">The Solution</a>
-                <a href="#demo">Live Demo</a>
-                <button id="dummy-login-btn" class="btn btn-secondary">Login</button>
-            </nav>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav container">
+        <div class="brand-wrap">
+          <img src="logo.png" id="brand-logo" alt="Klinam logo" />
+          <a href="#" class="brand-name">Klinam</a>
         </div>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="#story-1">Story</a>
+          <a href="#story-2">Impact</a>
+          <a href="#story-3">Solution</a>
+          <a href="#demo">Demo</a>
+        </nav>
+        <div class="nav-cta">
+          <button id="dummy-login-btn" class="btn royal">Login</button>
+        </div>
+      </div>
     </header>
 
-    <section class="hero-video-container">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="hero-waste-video.mp4" type="video/mp4">
+    <main>
+      <section class="hero-video-container" aria-label="Hero">
+        <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+          <source src="hero-waste-video.mp4" type="video/mp4">
         </video>
+
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Decentralized Waste Utility for Uncharted Terrains</h1>
-            <p>Bridging the gap between physical micro-logistics, automated OPay billing, and smart local community action.</p>
-            <a href="#story-1" class="btn btn-primary">See the Reality</a>
-        </div>
-    </section>
 
-    <section id="story-1" class="story-row">
+        <div class="hero-copy container">
+          <h1>Decentralized Waste Utility for Uncharted Terrains</h1>
+          <p class="lead">Where narrow, unpaved corridors frustrate municipal compactor trucks, Klinam deploys agile micro-logistics, caretaker reporting, and automated fintech to keep neighborhoods clean.</p>
+          <div class="hero-actions">
+            <button id="see-reality-btn" class="btn primary">See the Reality</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="story-1" class="story-row container">
         <div class="story-image-pane">
-            <img src="tight-roads.jpg" alt="Narrow, rugged off-campus streets blocking municipal trucks">
+          <img src="tight-roads.jpg" alt="Narrow unpaved residential road" />
         </div>
-        <div class="story-text-pane">
-            <span class="story-tag">The Bottleneck</span>
-            <h2>The Physical Reality of Off-Campus Terrains</h2>
-            <p>Traditional municipal compactor trucks completely fail in student residential corridors. Narrow pathways, unpaved terrain, and rugged roads lock out heavy government sanitation infrastructure, leaving local areas completely isolated from standard disposal services.</p>
+        <div class="story-copy">
+          <span class="badge">THE BOTTLENECK</span>
+          <h2>The Physical Reality of Off-Campus Terrains</h2>
+          <p>Many university-adjacent residential clusters are defined by tight alleyways, unpaved corridors and steep gradients that were never designed for municipal compactor trucks. These physical constraints make scheduled large-vehicle pickups unreliable, increase fuel and labour costs, and cause frequent service gaps leading to waste accumulation.</p>
         </div>
-    </section>
+      </section>
 
-    <section id="story-2" class="story-row reverse">
+      <section id="story-2" class="story-row reverse container">
+        <div class="story-copy">
+          <span class="badge alert">THE IMPACT</span>
+          <h2>The Massive Cost of Environmental Inaction</h2>
+          <p>Accumulated waste creates health risks, blocks natural drainage channels and accelerates soil erosion during the rainy season. Local flooding and contamination increase medical costs, damage infrastructure and degrade community wellbeing.</p>
+        </div>
         <div class="story-image-pane">
-            <img src="consequences.jpg" alt="Environmental pollution and blocked drainage channels">
+          <img src="consequences.jpg" alt="Consequences of blocked drains and waste" />
         </div>
-        <div class="story-text-pane">
-            <span class="story-tag tag-alert">The Consequence</span>
-            <h2>The Massive Cost of Environmental Inaction</h2>
-            <p>When utility trucks can't access homes, trash piles up at the doorstep. This leads to severe public health risks, localized rodent infestations, and open trash accumulation that blocks drainage channels—accelerating devastating road erosion during the rainy season.</p>
-        </div>
-    </section>
+      </section>
 
-    <section id="story-3" class="story-row">
+      <section id="story-3" class="story-row container">
         <div class="story-image-pane">
-            <img src="agile-trucks.jpg" alt="Klinam agile micro-logistics vehicles navigating corridors">
+          <img src="agile-trucks.jpg" alt="Agile small waste vehicle navigating narrow road" />
         </div>
-        <div class="story-text-pane">
-            <span class="story-tag tag-success">The Architecture</span>
-            <h2>Our Agile Fleet & Fintech Solution</h2>
-            <p>Klinam replaces massive municipal trucks with an agile fleet of highly maneuverable, small-scale vehicles. We eliminate cash transaction overhead entirely by automating collections through the OPay Recurrent Billing API, tracking property states via a lightweight caretaker reporting portal.</p>
+        <div class="story-copy">
+          <span class="badge tech">THE ARCHITECTURE</span>
+          <h2>Agile Fleet Logistics Meets Automated Fintech</h2>
+          <p>Klinam pairs small, rugged collection vehicles with the OPay Recurrent Billing API and a zero-CapEx caretaker portal. Caretakers signal fullness via a simple web interface and operators dispatch nearby agile vehicles to clear bins quickly and safely.</p>
         </div>
-    </section>
+      </section>
 
-    <section id="demo" class="demo-section">
-        <div class="demo-intro">
-            <h2>Experience the Functional Architecture</h2>
-            <p>See exactly how our software layer bridges the Caretaker's lodge status with the internal Operations Live Dispatch Control Feed instantly.</p>
+      <section class="live-ticker-section" aria-hidden="false">
+        <div class="ticker">
+          <div class="ticker-inner">
+            ⚡ SYSTEM STATUS: ACTIVE &nbsp; | &nbsp; 📦 ACTIVE LOGISTIC HUB PORTALS: 45 &nbsp; | &nbsp; 🚜 ACTIVE AGILE VEHICLES: 12 &nbsp; | &nbsp; 💸 SECURE OPAY TRANSFERS SECURED: 100%
+          </div>
         </div>
-        
-        <div class="interactive-demo-container">
-            <div class="demo-window window-caretaker">
-                <div class="window-header">🏠 Caretaker Interface (Apex Lodge)</div>
-                <div class="window-body">
-                    <div id="caretaker-status-card" class="status-card status-empty">
-                        <span class="status-indicator"></span>
-                        <span id="caretaker-status-text">Status: Empty</span>
-                    </div>
-                    <button id="sim-fill-btn" class="btn btn-alert full-width">Report Bin as Full</button>
-                </div>
-            </div>
+      </section>
 
-            <div class="demo-window window-admin">
-                <div class="window-header">🖥️ Klinam Operations Live Feed</div>
-                <div class="window-body">
-                    <table class="demo-table">
-                        <thead>
-                            <tr>
-                                <th>Property</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Apex Lodge</td>
-                                <td><span id="admin-status-badge" class="badge badge-empty">EMPTY</span></td>
-                                <td><button id="admin-dispatch-btn" class="btn btn-primary btn-sm" disabled>Dispatch Truck</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+      <section id="demo" class="demo-section container">
+        <h2>Interactive Simulation Workspace</h2>
+        <p class="muted">A lightweight simulation demonstrating caretaker reporting and the internal dispatch feed synchronization.</p>
+
+        <div class="demo-grid">
+          <aside class="panel caretaker" aria-labelledby="caretaker-status-card">
+            <h3>Caretaker Portal</h3>
+            <div id="caretaker-status-card" class="status status-empty" role="status" aria-live="polite">Status: Empty</div>
+            <button id="sim-fill-btn" class="btn danger full">Report Bin as Full</button>
+          </aside>
+
+          <section class="panel admin">
+            <h3>Internal Admin Feed</h3>
+            <table class="admin-table" aria-label="Dispatch queue">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Apex Lodge | 14, Apex Street</td>
+                  <td><span id="admin-status-badge" class="badge-pill badge-empty">EMPTY</span></td>
+                  <td><button id="admin-dispatch-btn" class="btn primary" disabled>Dispatch Truck</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 Klinam Utility Networks. Aligned with National Climate and Clean Sanitation Sustainability Initiatives.</p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="copy">© <span id="year">2026</span> Klinam. All rights reserved.</div>
+        <div class="policies">Policy • Terms • Privacy</div>
+        <div class="alignment">Aligned with National Clean Sanitation & Climate Sustainability Initiatives</div>
+      </div>
     </footer>
 
-    <script src="app.js"></script>
-</body>
+    <script src="app.js" defer></script>
+  </body>
 </html>
