@@ -1,31 +1,51 @@
-const stats = [
-  { id: 'stat-1', target: 25, suffix: '+' },
-  { id: 'stat-2', target: 100, suffix: '%' },
-  { id: 'stat-3', target: 4, suffix: 'x' }
-];
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. HARDWARE-LEAN CENTRAL STATE
+    const appState = { isTrashFilled: false };
 
-const animateValue = (element, target, suffix) => {
-  let current = 0;
-  const duration = 1200;
-  const stepTime = 20;
-  const steps = duration / stepTime;
-  const increment = target / steps;
+    // 2. DOM APEX TARGETS
+    const caretakerStatusCard = document.getElementById("caretaker-status-card");
+    const caretakerStatusText = document.getElementById("caretaker-status-text");
+    const simulateFillButton = document.getElementById("sim-fill-btn");
+    const adminStatusBadge = document.getElementById("admin-status-badge");
+    const adminDispatchButton = document.getElementById("admin-dispatch-btn");
+    const loginButton = document.getElementById("dummy-login-btn");
 
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      current = target;
-      clearInterval(timer);
+    // 3. REACTIVE DOM RENDERING
+    function renderSystemState() {
+        if (appState.isTrashFilled) {
+            caretakerStatusCard.className = "status-card status-filled";
+            caretakerStatusText.textContent = "Status: FILLED / NEEDS PICKUP";
+            simulateFillButton.textContent = "Report Dispatched to Ops";
+            simulateFillButton.disabled = true;
+
+            adminStatusBadge.className = "badge badge-filled";
+            adminStatusBadge.textContent = "FILLED";
+            adminDispatchButton.disabled = false;
+        } else {
+            caretakerStatusCard.className = "status-card status-empty";
+            caretakerStatusText.textContent = "Status: Empty";
+            simulateFillButton.textContent = "Report Bin as Full";
+            simulateFillButton.disabled = false;
+
+            adminStatusBadge.className = "badge badge-empty";
+            adminStatusBadge.textContent = "EMPTY";
+            adminDispatchButton.disabled = true;
+        }
     }
-    element.textContent = `${Math.round(current)}${suffix}`;
-  }, stepTime);
-};
 
-window.addEventListener('DOMContentLoaded', () => {
-  stats.forEach(({ id, target, suffix }) => {
-    const element = document.getElementById(id);
-    if (element) {
-      animateValue(element, target, suffix);
-    }
-  });
+    // 4. BINDING COMPONENT EVENT LISTENERS
+    simulateFillButton.addEventListener("click", () => {
+        appState.isTrashFilled = true;
+        renderSystemState();
+    });
+
+    adminDispatchButton.addEventListener("click", () => {
+        alert("🚨 Klinam Dispatch Hub: Micro-logistics driver routed to Apex Lodge!");
+        appState.isTrashFilled = false;
+        renderSystemState();
+    });
+
+    loginButton.addEventListener("click", () => {
+        alert("🔒 Secure Gateway Connection: User authentication profiles and OPay transaction pipelines execute immediately following the selection phase.");
+    });
 });

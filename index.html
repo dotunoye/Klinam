@@ -1,118 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Klinam | Smart Waste Utility for Hard-to-Reach Communities</title>
-    <meta
-      name="description"
-      content="Klinam provides decentralized waste-management-as-a-service for underserved residential zones using a tech-enabled, low-cost utility platform."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <nav class="navbar container">
-        <a href="#" class="brand">Klinam</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#solution">Solution</a>
-          <a href="#impact">Impact</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinam | Decentralized Waste Utility</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-      <div class="hero-content container">
-        <div class="hero-text">
-          <p class="eyebrow">Decentralized Waste Utility Platform</p>
-          <h1>Reliable waste collection for communities where traditional trucks cannot reach.</h1>
-          <p class="hero-copy">
-            Klinam brings a scalable, subscription-based waste-management service to off-campus residential areas using simple digital coordination and circular-economy recovery.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Get Involved</a>
-            <a href="#solution" class="btn btn-secondary">Explore Solution</a>
-          </div>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <img src="logo.png" alt="Klinam Logo" class="nav-logo">
+                <span class="logo-text">Klinam</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#story-1">The Problem</a>
+                <a href="#story-2">The Impact</a>
+                <a href="#story-3">The Solution</a>
+                <a href="#demo">Live Demo</a>
+                <button id="dummy-login-btn" class="btn btn-secondary">Login</button>
+            </nav>
         </div>
-
-        <div class="hero-card">
-          <h3>Why Klinam</h3>
-          <ul>
-            <li>Built for rugged, narrow, unpaved roads</li>
-            <li>Low-cost, hardware-light operations</li>
-            <li>Recurring subscriptions and circular recovery revenue</li>
-            <li>Mobile-first coordination for caretakers and operators</li>
-          </ul>
-        </div>
-      </div>
     </header>
 
-    <main>
-      <section id="about" class="section container">
-        <div class="section-heading">
-          <p class="eyebrow">About Klinam</p>
-          <h2>Turning waste overflow into a dependable neighborhood utility</h2>
+    <section class="hero-video-container">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="hero-waste-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Decentralized Waste Utility for Uncharted Terrains</h1>
+            <p>Bridging the gap between physical micro-logistics, automated OPay billing, and smart local community action.</p>
+            <a href="#story-1" class="btn btn-primary">See the Reality</a>
         </div>
-        <p>
-          Klinam is designed for university-adjacent residential zones where sanitation challenges are persistent and conventional municipal services are inefficient. The platform combines community reporting, operations dispatch, and sustainable material recovery into one practical service model.
-        </p>
-      </section>
+    </section>
 
-      <section id="solution" class="section section-alt">
-        <div class="container grid-3">
-          <article class="card">
-            <h3>Smart Reporting</h3>
-            <p>Caretakers report full bins through a simple interface, triggering immediate dispatch prioritization.</p>
-          </article>
-          <article class="card">
-            <h3>Flexible Operations</h3>
-            <p>Small, agile utility vehicles navigate difficult roads and service locations that larger trucks cannot access.</p>
-          </article>
-          <article class="card">
-            <h3>Circular Recovery</h3>
-            <p>Collected materials are sorted and routed into recyclable plastics and organic waste streams for downstream value.</p>
-          </article>
+    <section id="story-1" class="story-row">
+        <div class="story-image-pane">
+            <img src="tight-roads.jpg" alt="Narrow, rugged off-campus streets blocking municipal trucks">
         </div>
-      </section>
+        <div class="story-text-pane">
+            <span class="story-tag">The Bottleneck</span>
+            <h2>The Physical Reality of Off-Campus Terrains</h2>
+            <p>Traditional municipal compactor trucks completely fail in student residential corridors. Narrow pathways, unpaved terrain, and rugged roads lock out heavy government sanitation infrastructure, leaving local areas completely isolated from standard disposal services.</p>
+        </div>
+    </section>
 
-      <section id="impact" class="section container">
-        <div class="section-heading">
-          <p class="eyebrow">Impact</p>
-          <h2>A model built for sustainability, affordability, and scale</h2>
+    <section id="story-2" class="story-row reverse">
+        <div class="story-image-pane">
+            <img src="consequences.jpg" alt="Environmental pollution and blocked drainage channels">
         </div>
-        <div class="stats">
-          <div>
-            <strong id="stat-1">0+</strong>
-            <span>Neighborhoods served</span>
-          </div>
-          <div>
-            <strong id="stat-2">0%</strong>
-            <span>Hardware dependency</span>
-          </div>
-          <div>
-            <strong id="stat-3">0x</strong>
-            <span>Operational agility</span>
-          </div>
+        <div class="story-text-pane">
+            <span class="story-tag tag-alert">The Consequence</span>
+            <h2>The Massive Cost of Environmental Inaction</h2>
+            <p>When utility trucks can't access homes, trash piles up at the doorstep. This leads to severe public health risks, localized rodent infestations, and open trash accumulation that blocks drainage channels—accelerating devastating road erosion during the rainy season.</p>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <footer id="contact" class="footer">
-      <div class="container footer-content">
-        <div>
-          <h3>Klinam</h3>
-          <p>Building cleaner, more resilient waste systems for underserved communities.</p>
+    <section id="story-3" class="story-row">
+        <div class="story-image-pane">
+            <img src="agile-trucks.jpg" alt="Klinam agile micro-logistics vehicles navigating corridors">
         </div>
-        <a href="mailto:hello@klinam.com" class="btn btn-primary">hello@klinam.com</a>
-      </div>
+        <div class="story-text-pane">
+            <span class="story-tag tag-success">The Architecture</span>
+            <h2>Our Agile Fleet & Fintech Solution</h2>
+            <p>Klinam replaces massive municipal trucks with an agile fleet of highly maneuverable, small-scale vehicles. We eliminate cash transaction overhead entirely by automating collections through the OPay Recurrent Billing API, tracking property states via a lightweight caretaker reporting portal.</p>
+        </div>
+    </section>
+
+    <section id="demo" class="demo-section">
+        <div class="demo-intro">
+            <h2>Experience the Functional Architecture</h2>
+            <p>See exactly how our software layer bridges the Caretaker's lodge status with the internal Operations Live Dispatch Control Feed instantly.</p>
+        </div>
+        
+        <div class="interactive-demo-container">
+            <div class="demo-window window-caretaker">
+                <div class="window-header">🏠 Caretaker Interface (Apex Lodge)</div>
+                <div class="window-body">
+                    <div id="caretaker-status-card" class="status-card status-empty">
+                        <span class="status-indicator"></span>
+                        <span id="caretaker-status-text">Status: Empty</span>
+                    </div>
+                    <button id="sim-fill-btn" class="btn btn-alert full-width">Report Bin as Full</button>
+                </div>
+            </div>
+
+            <div class="demo-window window-admin">
+                <div class="window-header">🖥️ Klinam Operations Live Feed</div>
+                <div class="window-body">
+                    <table class="demo-table">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Apex Lodge</td>
+                                <td><span id="admin-status-badge" class="badge badge-empty">EMPTY</span></td>
+                                <td><button id="admin-dispatch-btn" class="btn btn-primary btn-sm" disabled>Dispatch Truck</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Klinam Utility Networks. Aligned with National Climate and Clean Sanitation Sustainability Initiatives.</p>
     </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <script src="app.js"></script>
+</body>
 </html>
