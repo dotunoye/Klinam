@@ -1,134 +1,557 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Klinam — Decentralized Waste Utility for Uncharted Terrains</title>
-    <meta name="description" content="Klinam replaces massive compactor trucks with agile micro-logistics and caretaker-driven reporting, integrated with OPay recurrent billing." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="nav container">
-        <div class="brand-wrap">
-          <img src="logo.png" id="brand-logo" alt="Klinam logo" />
-          <a href="#" class="brand-name">Klinam</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Klinam — Decentralized waste-utility platform replacing massive municipal trucks with agile fleet logistics for Nigerian university off-campus corridors." />
+  <title>Klinam — Decentralized Waste Utility for Uncharted Terrains</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       FIXED NAVIGATION HEADER
+  ════════════════════════════════════════════ -->
+  <header class="site-nav" role="banner">
+    <div class="nav-container">
+
+      <a href="#" class="nav-brand" aria-label="Klinam home">
+        <div class="brand-logo-wrapper">
+          <img src="logo.png" id="brand-logo" alt="Klinam logo mark" width="36" height="36" onerror="this.style.display='none'" />
+          <svg class="brand-logo-fallback" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#0F6B3E"/>
+            <path d="M8 28 L14 10 L18 20 L22 10 L28 28" stroke="#9FE1CB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M11 28 Q18 22 25 28" stroke="#5DCAA5" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          </svg>
         </div>
-        <nav class="primary-nav" aria-label="Primary navigation">
-          <a href="#story-1">Story</a>
-          <a href="#story-2">Impact</a>
-          <a href="#story-3">Solution</a>
-          <a href="#demo">Demo</a>
-        </nav>
-        <div class="nav-cta">
-          <button id="dummy-login-btn" class="btn royal">Login</button>
+        <span class="brand-text">Klinam</span>
+      </a>
+
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-links" class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a href="#story-1" class="nav-link">The Problem</a>
+        <a href="#story-2" class="nav-link">The Impact</a>
+        <a href="#story-3" class="nav-link">The Solution</a>
+        <a href="#demo"    class="nav-link">Live Demo</a>
+        <button id="dummy-login-btn" class="nav-cta-btn" type="button">
+          Sign In via OPay
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════
+         HERO — FULL BLEED VIDEO
+    ════════════════════════════════════════════ -->
+    <section class="hero-video-container" aria-label="Hero — Klinam platform introduction">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-hidden="true"
+      >
+        <source src="hero-waste-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-gradient-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-status-dot" aria-hidden="true"></span>
+          <span>Live Operations — FUNAAB Corridor</span>
+        </div>
+
+        <h1 class="hero-headline">
+          Decentralized Waste Utility<br class="hero-br" />
+          for Uncharted Terrains
+        </h1>
+
+        <p class="hero-subheadline">
+          Nigerian university off-campus corridors are physically inaccessible to traditional compactor trucks.
+          Klinam deploys agile micro-logistics fleets, automated OPay billing, and caretaker-reported web portals
+          to solve the waste crisis municipal systems cannot reach.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#story-1" class="btn btn-hero-primary" aria-label="Scroll down to see the reality">
+            See the Reality
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#demo" class="btn btn-hero-ghost">
+            Try the Demo
+          </a>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="hero-video-container" aria-label="Hero">
-        <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
-          <source src="hero-waste-video.mp4" type="video/mp4">
-        </video>
+    <!-- ═══════════════════════════════════════════
+         SECTION 1 — THE PROBLEM
+    ════════════════════════════════════════════ -->
+    <section id="story-1" class="story-row" aria-labelledby="story-1-heading">
 
-        <div class="hero-overlay"></div>
-
-        <div class="hero-copy container">
-          <h1>Decentralized Waste Utility for Uncharted Terrains</h1>
-          <p class="lead">Where narrow, unpaved corridors frustrate municipal compactor trucks, Klinam deploys agile micro-logistics, caretaker reporting, and automated fintech to keep neighborhoods clean.</p>
-          <div class="hero-actions">
-            <button id="see-reality-btn" class="btn primary">See the Reality</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="story-1" class="story-row container">
-        <div class="story-image-pane">
-          <img src="tight-roads.jpg" alt="Narrow unpaved residential road" />
-        </div>
-        <div class="story-copy">
-          <span class="badge">THE BOTTLENECK</span>
-          <h2>The Physical Reality of Off-Campus Terrains</h2>
-          <p>Many university-adjacent residential clusters are defined by tight alleyways, unpaved corridors and steep gradients that were never designed for municipal compactor trucks. These physical constraints make scheduled large-vehicle pickups unreliable, increase fuel and labour costs, and cause frequent service gaps leading to waste accumulation.</p>
-        </div>
-      </section>
-
-      <section id="story-2" class="story-row reverse container">
-        <div class="story-copy">
-          <span class="badge alert">THE IMPACT</span>
-          <h2>The Massive Cost of Environmental Inaction</h2>
-          <p>Accumulated waste creates health risks, blocks natural drainage channels and accelerates soil erosion during the rainy season. Local flooding and contamination increase medical costs, damage infrastructure and degrade community wellbeing.</p>
-        </div>
-        <div class="story-image-pane">
-          <img src="consequences.jpg" alt="Consequences of blocked drains and waste" />
-        </div>
-      </section>
-
-      <section id="story-3" class="story-row container">
-        <div class="story-image-pane">
-          <img src="agile-trucks.jpg" alt="Agile small waste vehicle navigating narrow road" />
-        </div>
-        <div class="story-copy">
-          <span class="badge tech">THE ARCHITECTURE</span>
-          <h2>Agile Fleet Logistics Meets Automated Fintech</h2>
-          <p>Klinam pairs small, rugged collection vehicles with the OPay Recurrent Billing API and a zero-CapEx caretaker portal. Caretakers signal fullness via a simple web interface and operators dispatch nearby agile vehicles to clear bins quickly and safely.</p>
-        </div>
-      </section>
-
-      <section class="live-ticker-section" aria-hidden="false">
-        <div class="ticker">
-          <div class="ticker-inner">
-            ⚡ SYSTEM STATUS: ACTIVE &nbsp; | &nbsp; 📦 ACTIVE LOGISTIC HUB PORTALS: 45 &nbsp; | &nbsp; 🚜 ACTIVE AGILE VEHICLES: 12 &nbsp; | &nbsp; 💸 SECURE OPAY TRANSFERS SECURED: 100%
-          </div>
-        </div>
-      </section>
-
-      <section id="demo" class="demo-section container">
-        <h2>Interactive Simulation Workspace</h2>
-        <p class="muted">A lightweight simulation demonstrating caretaker reporting and the internal dispatch feed synchronization.</p>
-
-        <div class="demo-grid">
-          <aside class="panel caretaker" aria-labelledby="caretaker-status-card">
-            <h3>Caretaker Portal</h3>
-            <div id="caretaker-status-card" class="status status-empty" role="status" aria-live="polite">Status: Empty</div>
-            <button id="sim-fill-btn" class="btn danger full">Report Bin as Full</button>
-          </aside>
-
-          <section class="panel admin">
-            <h3>Internal Admin Feed</h3>
-            <table class="admin-table" aria-label="Dispatch queue">
-              <thead>
-                <tr>
-                  <th>Property</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Apex Lodge | 14, Apex Street</td>
-                  <td><span id="admin-status-badge" class="badge-pill badge-empty">EMPTY</span></td>
-                  <td><button id="admin-dispatch-btn" class="btn primary" disabled>Dispatch Truck</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="copy">© <span id="year">2026</span> Klinam. All rights reserved.</div>
-        <div class="policies">Policy • Terms • Privacy</div>
-        <div class="alignment">Aligned with National Clean Sanitation & Climate Sustainability Initiatives</div>
+      <div class="story-image-pane">
+        <img
+          src="tight-roads.jpg"
+          alt="Narrow unpaved corridor road in a Nigerian university off-campus residential zone"
+          loading="lazy"
+        />
+        <div class="image-pane-caption">Ajobiewe Road corridor — FUNAAB vicinity</div>
       </div>
-    </footer>
 
-    <script src="app.js" defer></script>
-  </body>
+      <div class="story-copy-pane">
+        <span class="story-badge badge-bottleneck">The Bottleneck</span>
+        <h2 id="story-1-heading" class="story-heading">
+          The Physical Reality of Off-Campus Terrains
+        </h2>
+        <p class="story-body">
+          The residential corridors surrounding Nigerian university campuses present a structural logistics problem that municipal waste management has never been engineered to solve. Roads averaging 2.4 to 3.8 metres wide — compacted laterite, loose gravel, and eroded gullies — are the only arteries connecting dozens of student lodges to the urban grid.
+        </p>
+        <p class="story-body">
+          Standard municipal compactor trucks require a minimum 4-metre clearance and a firm load-bearing surface capable of supporting 18 to 26 tonnes of vehicle weight. Neither condition exists in these corridors. The result is a binary choice for waste management operators: stop at the corridor entrance and leave, or simply never schedule collection at all.
+        </p>
+        <p class="story-body">
+          Over 60% of off-campus waste in these zones is never formally collected. It accumulates at compound gates, along drainage channels, and in open lots — not because residents are indifferent, but because the infrastructure to remove it physically cannot access the location.
+        </p>
+        <div class="story-stat-strip">
+          <div class="stat-item">
+            <span class="stat-num">60%</span>
+            <span class="stat-label">Waste never collected</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3.8m</span>
+            <span class="stat-label">Avg. corridor width</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">26t</span>
+            <span class="stat-label">Compactor truck weight</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 2 — THE IMPACT
+    ════════════════════════════════════════════ -->
+    <section id="story-2" class="story-row story-row--reverse" aria-labelledby="story-2-heading">
+
+      <div class="story-copy-pane">
+        <span class="story-badge badge-impact">The Impact</span>
+        <h2 id="story-2-heading" class="story-heading">
+          The Massive Cost of Environmental Inaction
+        </h2>
+        <p class="story-body">
+          Uncollected solid waste in dense residential corridors is not merely an aesthetic problem. During Nigeria's April-to-October rainy season, accumulated waste blocks the shallow drainage channels that run parallel to corridor roads. Standing water follows within 48 hours of sustained rainfall — creating the exact conditions for cholera, typhoid fever, and malaria vector breeding.
+        </p>
+        <p class="story-body">
+          Organic material decomposing in open lots leaches nitrates and phosphates into the shallow water table that feeds compound boreholes — the primary drinking water source for over 70% of off-campus student populations. Soil erosion accelerates on deforested corridor margins where waste has removed ground cover, widening gullies and making roads progressively impassable.
+        </p>
+        <p class="story-body">
+          The compounded cost — medical, infrastructural, and economic — falls entirely on the student and landlord population. There is no municipal liability mechanism. There is no remediation schedule. Without a system purpose-built for these conditions, the trajectory continues unchecked each academic session.
+        </p>
+        <div class="story-stat-strip">
+          <div class="stat-item">
+            <span class="stat-num">70%</span>
+            <span class="stat-label">Students on borehole water</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">48h</span>
+            <span class="stat-label">To standing water after rain</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Municipal liability mechanisms</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-image-pane">
+        <img
+          src="consequences.jpg"
+          alt="Waterlogged off-campus corridor road with waste-blocked drainage during rainy season"
+          loading="lazy"
+        />
+        <div class="image-pane-caption">Blocked drainage — rainy season overflow consequence</div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 3 — THE SOLUTION
+    ════════════════════════════════════════════ -->
+    <section id="story-3" class="story-row" aria-labelledby="story-3-heading">
+
+      <div class="story-image-pane">
+        <img
+          src="agile-trucks.jpg"
+          alt="Small agile utility truck navigating a narrow off-campus corridor road"
+          loading="lazy"
+        />
+        <div class="image-pane-caption">Klinam agile fleet — purpose-built for corridor logistics</div>
+      </div>
+
+      <div class="story-copy-pane">
+        <span class="story-badge badge-solution">The Architecture</span>
+        <h2 id="story-3-heading" class="story-heading">
+          Agile Fleet Logistics Meets Automated Fintech
+        </h2>
+        <p class="story-body">
+          Klinam deploys a fleet of compact utility vehicles — sub-1,200kg gross vehicle weight, sub-2.2-metre body width — purpose-selected to navigate the exact road conditions that block conventional waste management. Each vehicle is assigned a corridor zone and a dynamic collection manifest generated in real time from caretaker-reported bin statuses.
+        </p>
+        <p class="story-body">
+          Subscription billing is handled entirely through the <strong>OPay Recurrent Billing API</strong>. On signup, landlords and caretakers authorize a monthly debit mandate. On the 1st of every month, the system fires an automated batch debit against all active mandates — no cash collection, no manual invoicing, no revenue leakage. Failed debits trigger an automated SMS retry loop before collection is suspended.
+        </p>
+        <p class="story-body">
+          Bin status is managed through a zero-CapEx caretaker web portal. When a compound bin reaches capacity, the caretaker taps a single button — "Report Bin as Full" — which instantly updates the internal admin dispatch feed and elevates that property to the top of the collection priority queue. No sensors. No hardware. Human intelligence at the edge.
+        </p>
+        <ul class="story-feature-list" role="list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#0F6B3E" stroke-width="1.4"/><path d="M5 8l2 2 4-4" stroke="#0F6B3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Sub-2.2m fleet width — navigates any corridor road
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#0F6B3E" stroke-width="1.4"/><path d="M5 8l2 2 4-4" stroke="#0F6B3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            OPay mandate billing — zero cash, zero leakage
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#0F6B3E" stroke-width="1.4"/><path d="M5 8l2 2 4-4" stroke="#0F6B3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Caretaker portal — real-time dispatch trigger, no hardware
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#0F6B3E" stroke-width="1.4"/><path d="M5 8l2 2 4-4" stroke="#0F6B3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Downstream recycling revenue — HDPE/PET + biogas feedstock
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 4 — LIVE TICKER
+    ════════════════════════════════════════════ -->
+    <section class="live-ticker-section" aria-label="Live operational statistics">
+      <div class="ticker-track" aria-live="polite" aria-atomic="false">
+        <div class="ticker-content" aria-hidden="true">
+          <span class="ticker-item">
+            <span class="ticker-dot ticker-dot--green" aria-hidden="true"></span>
+            SYSTEM STATUS: ACTIVE
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">📦</span>
+            ACTIVE LOGISTIC HUB PORTALS: 45
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">🚜</span>
+            ACTIVE AGILE VEHICLES: 12
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">💸</span>
+            OPAY TRANSFERS SECURED: 100%
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-dot ticker-dot--amber" aria-hidden="true"></span>
+            COLLECTIONS TODAY: 34
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">♻️</span>
+            KG RECYCLED THIS WEEK: 1,240 kg
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="ticker-content" aria-hidden="true">
+          <span class="ticker-item">
+            <span class="ticker-dot ticker-dot--green" aria-hidden="true"></span>
+            SYSTEM STATUS: ACTIVE
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">📦</span>
+            ACTIVE LOGISTIC HUB PORTALS: 45
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">🚜</span>
+            ACTIVE AGILE VEHICLES: 12
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">💸</span>
+            OPAY TRANSFERS SECURED: 100%
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-dot ticker-dot--amber" aria-hidden="true"></span>
+            COLLECTIONS TODAY: 34
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+          <span class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">♻️</span>
+            KG RECYCLED THIS WEEK: 1,240 kg
+          </span>
+          <span class="ticker-sep" aria-hidden="true">·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 5 — INTERACTIVE DEMO
+    ════════════════════════════════════════════ -->
+    <section id="demo" class="demo-section" aria-labelledby="demo-heading">
+
+      <div class="demo-header">
+        <span class="demo-eyebrow">Live System Simulation</span>
+        <h2 id="demo-heading" class="demo-title">
+          The Real-Time Sync Engine
+        </h2>
+        <p class="demo-description">
+          This simulation mirrors the exact data pipeline that runs in production. When a caretaker reports a full bin, the state propagates instantly to the internal admin dispatch feed — no polling, no delay. Interact below to see the system respond.
+        </p>
+      </div>
+
+      <div class="demo-workspace">
+
+        <!-- LEFT: CARETAKER PORTAL -->
+        <div class="demo-panel" role="region" aria-labelledby="caretaker-panel-title">
+          <div class="demo-panel-header">
+            <div class="demo-panel-indicator" aria-hidden="true"></div>
+            <h3 id="caretaker-panel-title" class="demo-panel-title">Caretaker Web Portal</h3>
+            <span class="demo-panel-subtitle">Property: Apex Lodge · 14, Apex Street</span>
+          </div>
+
+          <div class="demo-panel-body">
+
+            <div class="demo-panel-meta">
+              <div class="demo-meta-row">
+                <span class="demo-meta-label">Subscription</span>
+                <span class="demo-meta-value demo-meta-value--green">Standard Tier · Active</span>
+              </div>
+              <div class="demo-meta-row">
+                <span class="demo-meta-label">Mandate</span>
+                <span class="demo-meta-value">OPay · ₦3,500/mo</span>
+              </div>
+              <div class="demo-meta-row">
+                <span class="demo-meta-label">Last Cleared</span>
+                <span class="demo-meta-value">Today · 08:14</span>
+              </div>
+            </div>
+
+            <div id="caretaker-status-card" class="caretaker-status-card status-empty" role="status" aria-live="polite" aria-atomic="true">
+              <div class="status-indicator-row">
+                <span class="status-dot-lg" aria-hidden="true"></span>
+                <span class="status-text" id="caretaker-status-text">Status: Empty</span>
+              </div>
+              <p class="status-sublabel">Bin is within normal capacity. No action required.</p>
+            </div>
+
+            <button id="sim-fill-btn" class="btn btn-report-full" type="button" aria-label="Report compound bin as full to trigger dispatch">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M9 4v7M6 8l3 3 3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="2" y="14" width="14" height="2.5" rx="1.25" fill="currentColor" opacity="0.6"/>
+              </svg>
+              Report Bin as Full
+            </button>
+
+          </div>
+        </div>
+
+        <!-- CONNECTOR VISUAL -->
+        <div class="demo-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-pulse"></div>
+          <div class="connector-label">LIVE SYNC</div>
+        </div>
+
+        <!-- RIGHT: ADMIN DISPATCH PORTAL -->
+        <div class="demo-panel" role="region" aria-labelledby="admin-panel-title">
+          <div class="demo-panel-header">
+            <div class="demo-panel-indicator" aria-hidden="true"></div>
+            <h3 id="admin-panel-title" class="demo-panel-title">Admin Dispatch Feed</h3>
+            <span class="demo-panel-subtitle">Internal Operations · Live Manifest</span>
+          </div>
+
+          <div class="demo-panel-body">
+
+            <div class="admin-table-wrapper" role="region" aria-label="Property dispatch table">
+              <table class="admin-table" aria-label="Active property collection status">
+                <thead>
+                  <tr>
+                    <th scope="col">Property</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="admin-table-row" id="admin-apex-row">
+                    <td class="admin-cell-property">
+                      <div class="property-name">Apex Lodge</div>
+                      <div class="property-address">14, Apex Street · Corridor B</div>
+                    </td>
+                    <td class="admin-cell-status">
+                      <span id="admin-status-badge" class="status-badge badge-empty" aria-live="polite" aria-atomic="true">
+                        <span class="badge-dot" aria-hidden="true"></span>
+                        EMPTY
+                      </span>
+                    </td>
+                    <td class="admin-cell-action">
+                      <button
+                        id="admin-dispatch-btn"
+                        class="btn btn-dispatch"
+                        type="button"
+                        disabled
+                        aria-disabled="true"
+                        aria-label="Dispatch truck to Apex Lodge — only available when bin is reported full"
+                      >
+                        Dispatch Truck
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Placeholder rows to add visual depth -->
+                  <tr class="admin-table-row admin-row-ghost">
+                    <td class="admin-cell-property">
+                      <div class="property-name">Grace Hall Annex</div>
+                      <div class="property-address">7, Landewora Road · Corridor A</div>
+                    </td>
+                    <td class="admin-cell-status">
+                      <span class="status-badge badge-empty"><span class="badge-dot"></span>EMPTY</span>
+                    </td>
+                    <td class="admin-cell-action">
+                      <button class="btn btn-dispatch" disabled aria-disabled="true">Dispatch</button>
+                    </td>
+                  </tr>
+                  <tr class="admin-table-row admin-row-ghost">
+                    <td class="admin-cell-property">
+                      <div class="property-name">Favour Lodge Block B</div>
+                      <div class="property-address">Ajobiewe Rd, 2nd junction · Corridor C</div>
+                    </td>
+                    <td class="admin-cell-status">
+                      <span class="status-badge badge-empty"><span class="badge-dot"></span>EMPTY</span>
+                    </td>
+                    <td class="admin-cell-action">
+                      <button class="btn btn-dispatch" disabled aria-disabled="true">Dispatch</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="admin-footer-meta">
+              <span class="admin-meta-chip">
+                <span class="chip-dot chip-dot--green"></span>
+                Live feed active
+              </span>
+              <span class="admin-meta-chip">
+                Supabase Realtime · WS connected
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /demo-workspace -->
+
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+
+      <div class="footer-brand-col">
+        <a href="#" class="footer-brand" aria-label="Klinam home">
+          <svg class="footer-logo" width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#1A2B1F"/>
+            <path d="M8 28 L14 10 L18 20 L22 10 L28 28" stroke="#5DCAA5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M11 28 Q18 22 25 28" stroke="#1D9E75" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span>Klinam</span>
+        </a>
+        <p class="footer-tagline">
+          Decentralized waste utility infrastructure for Nigerian university off-campus residential corridors.
+        </p>
+        <div class="footer-initiative-badges">
+          <span class="initiative-badge">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="#4ADE80" stroke-width="1.2"/><path d="M3.5 6l2 2 3-3" stroke="#4ADE80" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            UN SDG 11 — Sustainable Cities
+          </span>
+          <span class="initiative-badge">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="#4ADE80" stroke-width="1.2"/><path d="M3.5 6l2 2 3-3" stroke="#4ADE80" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            UN SDG 13 — Climate Action
+          </span>
+          <span class="initiative-badge">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="#4ADE80" stroke-width="1.2"/><path d="M3.5 6l2 2 3-3" stroke="#4ADE80" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Nigeria FMENV Clean Sanitation Alignment
+          </span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-col-heading">Platform</h4>
+        <ul class="footer-link-list" role="list">
+          <li><a href="#story-1">The Problem</a></li>
+          <li><a href="#story-2">The Impact</a></li>
+          <li><a href="#story-3">The Solution</a></li>
+          <li><a href="#demo">Live Demo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-col-heading">Operations</h4>
+        <ul class="footer-link-list" role="list">
+          <li><a href="#">Caretaker Portal</a></li>
+          <li><a href="#">Admin Dispatch</a></li>
+          <li><a href="#">OPay Billing</a></li>
+          <li><a href="#">Recycling Hub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-col-heading">Legal</h4>
+        <ul class="footer-link-list" role="list">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Data Processing</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> Klinam Technologies Ltd. All rights reserved.
+        Registered in Nigeria (RC: pending). Built in Abeokuta.
+      </p>
+      <p class="footer-policy-note">
+        Klinam operates in alignment with the Federal Ministry of Environment's National Environmental Sanitation Policy
+        and the Nigerian Climate Change Act 2021. OPay payment services are regulated by the Central Bank of Nigeria.
+      </p>
+    </div>
+
+  </footer>
+
+  <script src="app.js"></script>
+</body>
 </html>
