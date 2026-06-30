@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('mobile-active');
-      toggle.innerText = nav.classList.contains('mobile-active') ? '✕' : '☰';
+      const isOpen = nav.classList.toggle('mobile-active');
+      toggle.innerText = isOpen ? '✕' : '☰';
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     nav.querySelectorAll('a').forEach((link) => {
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nav.classList.contains('mobile-active')) {
           nav.classList.remove('mobile-active');
           toggle.innerText = '☰';
+          toggle.setAttribute('aria-expanded', 'false');
         }
       });
     });
