@@ -748,7 +748,11 @@ h2 {
   }
 
   .footer-grid {
-
+  padding: 1rem, 0;
   justify-content: center;
+  }
+
+  .footer-links {
+  gap: 0.5rem;
 }
 }
